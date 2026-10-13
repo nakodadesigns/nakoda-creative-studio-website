@@ -188,3 +188,8 @@
 
 /* Legal pages: compact back link */
 .legal-back{display:inline-flex;align-items:center;justify-content:center;margin-top:10px;padding:9px 18px;border:1px solid var(--gold);border-radius:4px;color:var(--navy);font-size:13px;font-weight:700;text-decoration:none;transition:background .2s ease,color .2s ease}.legal-back:hover{background:var(--gold);color:var(--navy)}.legal-content h2{margin-top:28px}.legal-content p{line-height:1.75}
+
+/* Keep legal document typography readable and separate from oversized marketing headings */
+.legal-content h2{font-size:clamp(20px,2vw,28px);line-height:1.2;letter-spacing:-.02em;margin:26px 0 9px;font-weight:650}
+.legal-content p{font-size:16px;line-height:1.7;margin:0 0 14px;color:#344b5e}
+@media(max-width:680px){.legal-content h2{font-size:21px;margin-top:22px}.legal-content p{font-size:15px;line-height:1.65}}
