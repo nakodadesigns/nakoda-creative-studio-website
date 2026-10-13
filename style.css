@@ -182,22 +182,3 @@
 @media(max-width:680px){.navlinks .home-nav-link:after{display:none}.navcta.aatmanirbhar-cta{display:none}}
 
 
-/* Footer layout inspired by the supplied reference */
-.footer{background:#091629;color:#f4f1e9;padding:48px 0 18px}
-.footer-grid.footer-grid-reference{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:clamp(28px,7vw,100px);align-items:start}
-.footer-grid-reference h4{font-size:15px;font-weight:700;letter-spacing:.01em;margin:2px 0 22px;color:#f7f3e9;text-transform:none}
-.footer-grid-reference .brand-logo-img{filter:brightness(0) invert(1);opacity:1;max-width:190px}
-.footer-grid-reference .footer-about{font-size:14px;line-height:1.55;color:#b9c1cc;max-width:340px;margin:15px 0}
-.footer-grid-reference .footer-links{display:grid;gap:13px}
-.footer-grid-reference .footer-links a{font-size:14px;line-height:1.35;color:#b9c1cc;text-decoration:none;transition:color .2s ease}
-.footer-grid-reference .footer-links a:hover{color:#e7b33e}
-.footer-grid-reference .footer-links .footer-highlight-link{color:#e7b33e;font-weight:700}
-.footer-highlights{list-style:none;padding:0;margin:20px 0;display:grid;gap:13px}
-.footer-highlights li{display:flex;align-items:center;gap:10px;color:#b9c1cc;font-size:14px;line-height:1.4}
-.footer-highlights li span{width:14px;color:#e7b33e;font-size:17px;text-align:center}
-.footer-grid-reference .socials{margin-top:18px}
-.footer-grid-reference .footer-tagline{font-size:14px;color:#e7b33e;font-weight:600;margin:13px 0}
-.footer-grid-reference .footer-bottom{border-top:1px solid #ffffff20;margin-top:35px;padding-top:15px;display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#9daaba}
-.footer-grid-reference .footer-bottom span{font-size:12px}
-@media(max-width:680px){.footer-grid.footer-grid-reference{grid-template-columns:1fr 1fr;gap:30px 24px}.footer-grid-reference .footer-brand{grid-column:1 / -1}.footer-grid-reference .footer-bottom{flex-direction:column;gap:8px}}
-@media(max-width:420px){.footer-grid.footer-grid-reference{grid-template-columns:1fr}.footer-grid-reference .footer-brand{grid-column:auto}}
