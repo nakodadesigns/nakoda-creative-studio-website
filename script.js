@@ -18,7 +18,8 @@ document.addEventListener("click", function (event) {
     trackNcsEvent("cta_click", { ...common, cta_location: link.closest("header") ? "header" : link.closest("footer") ? "footer" : "content" });
   }
 });
-\nconst menuButton=document.getElementById("menu");const nav=document.getElementById("navlinks");
+
+const menuButton=document.getElementById("menu");const nav=document.getElementById("navlinks");
 if(menuButton&&nav){menuButton.addEventListener("click",()=>{const open=nav.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(open));menuButton.textContent=open?"✕":"☰";});nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");menuButton.setAttribute("aria-expanded","false");menuButton.textContent="☰";}));}
 const year=document.getElementById("year");if(year)year.textContent=new Date().getFullYear();
 const citySelect=document.getElementById("citySelect");const otherCity=document.getElementById("otherCity");if(citySelect&&otherCity){const toggleOtherCity=()=>{const show=citySelect.value==="Other";otherCity.style.display=show?"block":"none";otherCity.required=show;};citySelect.addEventListener("change",toggleOtherCity);toggleOtherCity();}
