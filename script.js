@@ -63,3 +63,21 @@ if ("IntersectionObserver" in window) {
   }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
   revealTargets.forEach((el) => revealObserver.observe(el));
 }
+
+
+// Reveal section text with a restrained heading -> paragraph rhythm.
+if ("IntersectionObserver" in window) {
+  const textTargets = document.querySelectorAll(
+    ".section-head, .about-copy, .portfolio-intro, .digital-grid > div:first-child, .process, .contact-copy, .services-grid, .industry-grid, .portfolio-grid, .contact-form, .checklist, .stats"
+  );
+  textTargets.forEach((el) => el.classList.add("reveal-copy"));
+  const textObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" });
+  textTargets.forEach((el) => textObserver.observe(el));
+}
