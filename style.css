@@ -39,3 +39,59 @@
   .reveal-ready .reveal{opacity:1;transform:none;transition:none}
   .industry,.service-card,.project,.industry img,.service-card img,.project img,.chip-icon,.navcta,.socials a{transition:none}
 }
+
+/* Layout refinement: more breathing room, larger creative cards, reliable location artwork */
+.section{padding-top:36px;padding-bottom:36px}
+.industry-grid{gap:12px}
+.industry{border-radius:8px}
+.industry img{height:76px}
+.industry div{font-size:10px;min-height:40px;padding:9px 10px}
+.about-grid{gap:24px}
+.about-photo{height:215px;border-radius:8px}
+.stats{padding:18px;gap:14px}
+.services-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.service-card{border:1px solid #e6e9eb;border-radius:8px;padding:10px;background:#fff;overflow:hidden}
+.service-title{font-size:11px;min-height:32px;align-items:center;gap:9px}
+.service-card img{height:145px;border-radius:5px}
+.process-line{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;row-gap:18px}
+.step{font-size:10px;gap:10px}
+.step b{font-size:10px}
+.portfolio-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.project{border-radius:8px}
+.project img{height:150px}
+.project div{padding:11px}
+.project b{font-size:11px}
+.project small{font-size:10px}
+.contact-grid{gap:22px}
+.contact-form{gap:12px}
+.contact-form label{font-size:10px}
+.contact-form input,.contact-form select,.contact-form textarea{font-size:11px;padding:11px}
+.map-card{background:#e8efe8}
+.map-card>img{display:none}
+.map-art{position:absolute;inset:0;overflow:hidden;background-color:#e8efe8;background-image:linear-gradient(24deg,transparent 47%,#fff 48%,#fff 52%,transparent 53%),linear-gradient(112deg,transparent 43%,#fff 44%,#fff 48%,transparent 49%),linear-gradient(0deg,transparent 74%,#d3e3d3 75%,#d3e3d3 82%,transparent 83%);background-size:150px 110px,190px 150px,100% 100%}
+.map-road{position:absolute;display:block;background:#fff;border:1px solid #d8dfd6;border-radius:20px}
+.road-one{width:130%;height:18px;left:-10%;top:42%;transform:rotate(-19deg)}
+.road-two{width:125%;height:13px;left:-12%;top:66%;transform:rotate(31deg)}
+.road-three{width:16px;height:130%;left:60%;top:-15%;transform:rotate(12deg)}
+.map-block{position:absolute;display:block;background:#d6e5d3;border-radius:8px}
+.block-one{width:70px;height:35px;left:12%;top:15%}.block-two{width:95px;height:45px;right:10%;top:20%}.block-three{width:80px;height:30px;left:42%;bottom:12%}
+.map-pin{position:absolute;left:52%;top:35%;display:grid;place-items:center;width:40px;height:40px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#d72e2e;color:#fff;font-size:25px;box-shadow:0 5px 12px #10294430}
+.map-overlay{z-index:2}
+@media(max-width:1000px){
+ .section{padding-top:30px;padding-bottom:30px}
+ .industry-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .services-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .portfolio-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .process-line{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .service-card img{height:130px}
+}
+@media(max-width:680px){
+ .section{padding-top:25px;padding-bottom:25px}
+ .industry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .service-card{padding:7px}
+ .service-card img{height:112px}
+ .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .project img{height:120px}
+ .process-line{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+}
