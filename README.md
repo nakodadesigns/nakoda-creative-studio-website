@@ -19,3 +19,7 @@ The form opens a pre-filled WhatsApp message to `+91 98900 53179`. It does not s
 - Replace illustrative portfolio images with approved work.
 - Verify social profile links and legal policy pages.
 - Keep existing domain DNS and email records unchanged.
+
+
+## Brand logo
+`assets/nakoda-logo.png` is the supplied Nakoda Creative Studio logo, cropped for use in the site header and footer. Upload the `assets` folder along with the HTML, CSS and JS files.
