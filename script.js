@@ -9,12 +9,12 @@ document.addEventListener("click", function (event) {
   const link = event.target.closest("a[href]");
   if (!link) return;
   const href = link.getAttribute("href") || "";
-  const label = (link.innerText || link.getAttribute("aria-label") || "").trim().replace(/\\s+/g, " ").slice(0, 100);
+  const label = (link.innerText || link.getAttribute("aria-label") || "").trim().replace(/\s+/g, " ").slice(0, 100);
   const common = { link_url: href, link_text: label, page_path: window.location.pathname };
   if (/^tel:/i.test(href)) trackNcsEvent("phone_click", common);
-  if (/wa\\.me\\//i.test(href) || /api\\.whatsapp\\.com/i.test(href)) trackNcsEvent("whatsapp_click", common);
+  if (/wa\.me\//i.test(href) || /api\.whatsapp\.com/i.test(href)) trackNcsEvent("whatsapp_click", common);
   if (/^mailto:/i.test(href)) trackNcsEvent("email_click", common);
-  if (link.matches(".btn, .navcta, .text-link, .small-link") || /contact\\.html/i.test(href)) {
+  if (link.matches(".btn, .navcta, .text-link, .small-link") || /contact\.html/i.test(href)) {
     trackNcsEvent("cta_click", { ...common, cta_location: link.closest("header") ? "header" : link.closest("footer") ? "footer" : "content" });
   }
 });
