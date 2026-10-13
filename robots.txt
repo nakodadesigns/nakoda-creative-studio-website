@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nakodacreativestudio.com/sitemap.xml
