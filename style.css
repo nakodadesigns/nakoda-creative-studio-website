@@ -310,3 +310,18 @@
 .footer-grid>div:nth-child(3){order:2}
 .footer-grid>div:nth-child(5){order:3}
 .footer-grid>div:nth-child(4){order:4}
+
+/* Homepage FAQs */
+.faq-section{background:#f7f4ec;border-top:1px solid #eee8da;border-bottom:1px solid #eee8da;padding:clamp(38px,5vw,70px) 0}
+.faq-layout{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.28fr);gap:clamp(28px,6vw,88px);align-items:start}
+.faq-intro h2{font-size:clamp(28px,3vw,42px);line-height:1.08;letter-spacing:-.035em;color:var(--navy);margin:10px 0 14px}
+.faq-intro h2 em{font-style:normal;color:#c88d0b}
+.faq-intro p{font-size:13px;line-height:1.7;color:var(--muted);max-width:310px;margin-bottom:20px}
+.faq-list{border-top:1px solid #dcd8ce}
+.faq-item{border-bottom:1px solid #dcd8ce;padding:0 2px}
+.faq-item summary{position:relative;list-style:none;cursor:pointer;padding:17px 36px 17px 0;color:var(--navy);font-size:14px;font-weight:750;line-height:1.45}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{content:"+";position:absolute;right:4px;top:14px;font-size:23px;font-weight:400;color:#b5800c}
+.faq-item[open] summary:after{content:"−"}
+.faq-item p{font-size:13px;line-height:1.75;color:#53667a;margin:0;padding:0 30px 18px 0;max-width:700px}
+@media(max-width:680px){.faq-layout{grid-template-columns:1fr;gap:22px}.faq-intro h2{font-size:32px}.faq-item summary{font-size:13px;padding:15px 32px 15px 0}.faq-item p{font-size:12px}}
