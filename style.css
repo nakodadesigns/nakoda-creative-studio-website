@@ -229,7 +229,14 @@
 .real-work-card h3{font-size:clamp(20px,2vw,28px);line-height:1.15;margin:10px 0 7px}
 .real-work-card p{font-size:14px;color:var(--muted);margin:0}
 @media(max-width:680px){.real-work-grid{grid-template-columns:1fr}.real-work-card img{height:270px}}
-.about-founder-profile{margin-top:26px;max-width:340px}
-.about-founder-profile img{display:block;width:100%;max-height:420px;object-fit:contain;object-position:center bottom;background:#f5f1e8;border-radius:4px}
-.about-founder-profile p{margin:10px 0 0;font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--navy)}
-@media(max-width:680px){.about-founder-profile{max-width:280px}.about-founder-profile img{max-height:360px}}
+
+/* Dedicated founder profile section on About page */
+.founder-section{padding:clamp(48px,7vw,92px) 0;background:#f5f1e8}
+.founder-section-grid{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(0,1.2fr);gap:clamp(32px,7vw,100px);align-items:center;max-width:1120px}
+.founder-photo-panel{height:clamp(340px,42vw,500px);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:#fffefa;border-radius:4px}
+.founder-photo-panel img{width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.founder-section-copy h2{font-size:clamp(34px,4.4vw,58px);line-height:1.03;letter-spacing:-.045em;margin:15px 0 22px;color:var(--navy)}
+.founder-section-copy h2 em{font-style:normal;color:#c88d0b}
+.founder-section-copy p{font-size:clamp(15px,1.25vw,17px);line-height:1.8;color:var(--muted);max-width:590px}
+.founder-name{margin-top:25px;padding-top:15px;border-top:1px solid #d8d0c1;font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--navy)}
+@media(max-width:680px){.founder-section-grid{grid-template-columns:1fr;gap:26px}.founder-photo-panel{height:360px;max-width:390px;width:100%;margin:0 auto}.founder-section-copy h2{font-size:clamp(34px,9vw,46px)}}
