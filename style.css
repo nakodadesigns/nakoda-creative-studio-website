@@ -185,3 +185,6 @@
 
 /* Interactive Google Maps embed on Contact page */
 .map-card iframe{display:block;width:100%;height:100%;border:0;position:absolute;inset:0}.map-card .map-overlay{z-index:2;left:10px;bottom:10px;display:block;text-decoration:none;color:var(--navy)}.map-card .map-overlay:hover{color:var(--gold2)}
+
+/* Legal pages: compact back link */
+.legal-back{display:inline-flex;align-items:center;justify-content:center;margin-top:10px;padding:9px 18px;border:1px solid var(--gold);border-radius:4px;color:var(--navy);font-size:13px;font-weight:700;text-decoration:none;transition:background .2s ease,color .2s ease}.legal-back:hover{background:var(--gold);color:var(--navy)}.legal-content h2{margin-top:28px}.legal-content p{line-height:1.75}
