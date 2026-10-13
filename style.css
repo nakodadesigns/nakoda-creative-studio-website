@@ -9,3 +9,33 @@
 @media(max-width:1000px){.navlinks{gap:12px}.navlinks a{font-size:10px}.industry-grid{grid-template-columns:repeat(4,1fr)}.services-grid{grid-template-columns:repeat(3,1fr)}.service-card img{height:110px}.process-line{grid-template-columns:repeat(4,1fr);row-gap:14px}.portfolio-grid{grid-template-columns:repeat(3,1fr)}.project img{height:125px}.about-grid{grid-template-columns:.9fr 1.1fr}.stats{grid-column:span 2;grid-template-columns:repeat(4,1fr)}.contact-grid{grid-template-columns:1fr 1.2fr}.map-card{grid-column:span 2;height:150px}.digital-grid{grid-template-columns:1fr 1fr}.why{grid-column:1/-1}}
 @media(max-width:680px){html{scroll-padding-top:72px}.wrap{width:92%}.nav{height:62px}.logo{min-width:0}.logo strong{font-size:27px}.navcta{display:none}.menu{display:block}.navlinks{display:none;position:absolute;top:62px;left:0;right:0;background:#f7f3e9;color:var(--navy);padding:12px 4%;flex-direction:column;align-items:stretch;border-top:1px solid #dfe4e6;box-shadow:0 12px 22px #10294412}.navlinks.open{display:flex}.navlinks a{padding:9px 4px;font-size:12px}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:30px 0 18px}.hero h1{font-size:48px}.hero-art{height:230px;margin:0 -4.35%}.service-chips{grid-template-columns:repeat(4,1fr);row-gap:12px;margin-bottom:15px}.section{padding:24px 0}.section-head{align-items:flex-start;flex-direction:column;gap:9px}.industry-grid{grid-template-columns:repeat(2,1fr)}.industry img{height:88px}.industry div{font-size:10px}.about-grid{grid-template-columns:1fr}.about-photo{height:200px}.stats{grid-column:auto;grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:repeat(2,1fr);gap:12px}.service-title{font-size:10px;min-height:36px}.service-card img{height:120px}.process-line{grid-template-columns:repeat(2,1fr);gap:13px}.portfolio-layout{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:repeat(2,1fr)}.project img{height:135px}.digital-grid{grid-template-columns:1fr;gap:14px}.phone-photo{height:190px}.why{grid-column:auto}.why-grid small{font-size:10px}.contact-grid{grid-template-columns:1fr}.map-card{grid-column:auto;height:190px}.contact-form{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:span 2}.footer-bottom{flex-direction:column}.hero-art .art-label{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Refined motion: subtle, fast, and respectful of reduced-motion settings */
+@keyframes ncs-rise-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ncs-soft-zoom{from{opacity:.65;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
+@keyframes ncs-glint{0%,100%{box-shadow:0 0 0 0 #f2b63200}50%{box-shadow:0 0 0 4px #f2b63220}}
+.js-motion .hero-copy .eyebrow,.js-motion .hero h1,.js-motion .hero-copy>p,.js-motion .hero-copy .actions,.js-motion .service-chips{opacity:0;animation:ncs-rise-in .65s cubic-bezier(.2,.7,.2,1) forwards}
+.js-motion .hero-copy .eyebrow{animation-delay:.05s}
+.js-motion .hero h1{animation-delay:.13s}
+.js-motion .hero-copy>p{animation-delay:.22s}
+.js-motion .hero-copy .actions{animation-delay:.3s}
+.js-motion .service-chips{animation-delay:.38s}
+.js-motion .hero-art>img{animation:ncs-soft-zoom .9s ease-out both}
+.reveal-ready .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.reveal-ready .reveal.is-visible{opacity:1;transform:translateY(0)}
+.reveal-ready .reveal-stagger>*{transition-delay:var(--reveal-delay,0ms)}
+.industry,.service-card,.project{transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
+.industry:hover,.service-card:hover,.project:hover{transform:translateY(-4px);box-shadow:0 12px 26px #10294416;border-color:#e8c36e}
+.industry img,.service-card img,.project img{transition:transform .45s ease}
+.industry:hover img,.service-card:hover img,.project:hover img{transform:scale(1.035)}
+.chip-icon{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.service-chip:hover .chip-icon{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 6px 16px #d99a0b22}
+.navcta{transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.navcta:hover{transform:translateY(-2px);box-shadow:0 8px 20px #d99a0b35}
+.socials a{transition:transform .2s ease,border-color .2s ease,color .2s ease}
+.socials a:hover{transform:translateY(-3px);border-color:var(--gold);color:var(--gold)}
+@media(prefers-reduced-motion:reduce){
+  .js-motion .hero-copy .eyebrow,.js-motion .hero h1,.js-motion .hero-copy>p,.js-motion .hero-copy .actions,.js-motion .service-chips,.js-motion .hero-art>img{opacity:1;animation:none;transform:none}
+  .reveal-ready .reveal{opacity:1;transform:none;transition:none}
+  .industry,.service-card,.project,.industry img,.service-card img,.project img,.chip-icon,.navcta,.socials a{transition:none}
+}
