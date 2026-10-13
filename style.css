@@ -171,3 +171,12 @@
 .home-symbol{font-size:17px;line-height:1}
 @media(max-width:1000px){.nav{gap:12px}.navlinks{gap:10px}.navlinks a{font-size:10px}.navcta.home-cta{min-width:auto;padding:10px 13px}}
 @media(max-width:680px){.nav{height:66px}.navcta.home-cta{display:inline-flex;margin-left:auto;padding:9px 12px;font-size:11px}.navlinks{top:66px}}
+
+/* Simplified header navigation: Home first, Aatmanirbhar CTA, restrained icon use */
+.navlinks .home-nav-link{font-weight:800;color:var(--navy)}
+.navlinks .home-nav-link:after{content:"";display:block;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .2s ease;margin-top:5px}
+.navlinks .home-nav-link:hover:after,.navlinks .home-nav-link:focus-visible:after{transform:scaleX(1)}
+.navcta.aatmanirbhar-cta{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border:1px solid var(--gold);border-radius:4px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:800;letter-spacing:.01em;transition:background .2s ease,color .2s ease,transform .2s ease}
+.navcta.aatmanirbhar-cta:hover{background:var(--navy);border-color:var(--navy);color:#fff;transform:translateY(-1px)}
+@media(max-width:1000px){.navcta.aatmanirbhar-cta{padding:10px 12px;font-size:10px}}
+@media(max-width:680px){.navlinks .home-nav-link:after{display:none}.navcta.aatmanirbhar-cta{display:none}}
