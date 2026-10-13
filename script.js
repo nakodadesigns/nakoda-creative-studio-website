@@ -43,3 +43,23 @@ document.getElementById("enquiry").addEventListener("submit", function (event) {
     "noopener,noreferrer"
   );
 });
+
+
+// Polished entrance and scroll-reveal motion. Content remains visible if JS/observer is unavailable.
+document.documentElement.classList.add("js-motion");
+const revealTargets = document.querySelectorAll(
+  ".section-head, .industry-grid, .about-grid, .services-grid, .process-line, .portfolio-layout, .digital-grid, .contact-grid, .footer-grid"
+);
+if ("IntersectionObserver" in window) {
+  document.documentElement.classList.add("reveal-ready");
+  revealTargets.forEach((el) => el.classList.add("reveal"));
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+  revealTargets.forEach((el) => revealObserver.observe(el));
+}
