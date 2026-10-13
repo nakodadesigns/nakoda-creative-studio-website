@@ -325,3 +325,14 @@
 .faq-item[open] summary:after{content:"−"}
 .faq-item p{font-size:13px;line-height:1.75;color:#53667a;margin:0;padding:0 30px 18px 0;max-width:700px}
 @media(max-width:680px){.faq-layout{grid-template-columns:1fr;gap:22px}.faq-intro h2{font-size:32px}.faq-item summary{font-size:13px;padding:15px 32px 15px 0}.faq-item p{font-size:12px}}
+
+/* Contact page: consistent regular-weight typography */
+.contact-panel h2,.contact-panel h3{font-weight:500}
+.contact-panel p,.contact-panel a,.contact-panel .contact-big,.contact-panel .contact-location strong,.contact-panel .contact-location span{font-weight:400}
+.contact-panel .eyebrow,.contact-panel .contact-item b{font-weight:500}
+.contact-page-form label{font-weight:400}
+.contact-page-form input,.contact-page-form select,.contact-page-form textarea{font-weight:400}
+.contact-page-form input::placeholder,.contact-page-form textarea::placeholder{font-weight:400}
+.contact-page-form .terms{font-weight:400}
+.contact-page-form .terms strong,.contact-page-form .terms b{font-weight:400}
+.contact-page-form .btn{font-weight:500}
