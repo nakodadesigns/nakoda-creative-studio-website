@@ -443,3 +443,10 @@
  .cinema-bg::after{width:100%;height:45%;inset:0 0 auto;background:linear-gradient(180deg,#061a2b 0%,rgba(6,26,43,.98) 72%,rgba(6,26,43,0) 100%);}
  .cinema-overlay{background:linear-gradient(0deg,rgba(6,26,43,.99) 0%,rgba(6,26,43,.94) 48%,rgba(6,26,43,.25) 100%);}
 }
+
+
+/* Approved final hero artwork: show the complete image without overlays or duplicate HTML text */
+.cinema-hero.cinema-image-only{display:block;min-height:0;height:auto;padding:0;background:transparent;overflow:hidden;}
+.cinema-hero.cinema-image-only .cinema-final-art{display:block;width:100%;height:auto;max-width:none;object-fit:contain;object-position:center;clip-path:none;transform:none;opacity:1;}
+.cinema-hero.cinema-image-only::before,.cinema-hero.cinema-image-only::after{display:none!important;content:none!important;}
+@media(max-width:680px){.cinema-hero.cinema-image-only{min-height:0;height:auto;align-items:initial;}.cinema-hero.cinema-image-only .cinema-final-art{width:100%;height:auto;object-fit:contain;}}
