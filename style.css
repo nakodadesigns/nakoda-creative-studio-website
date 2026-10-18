@@ -397,3 +397,37 @@
  .cinema-sub{max-width:34ch;font-size:15px;}
  .hero-index{top:18px;right:5%;}
 }
+
+
+/* Refined, staggered hero text entrance */
+@keyframes ncsHeroRise {
+  from { opacity: 0; transform: translate3d(0, 22px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.cinema-content > .eyebrow,
+.cinema-content > h1,
+.cinema-content > .cinema-sub,
+.cinema-content > .actions,
+.cinema-content > .hero-foot {
+  opacity: 0;
+  animation: ncsHeroRise 720ms cubic-bezier(.2,.7,.2,1) forwards;
+}
+.cinema-content > .eyebrow { animation-delay: 100ms; }
+.cinema-content > h1 { animation-delay: 260ms; }
+.cinema-content > .cinema-sub { animation-delay: 420ms; }
+.cinema-content > .actions { animation-delay: 560ms; }
+.cinema-content > .hero-foot { animation-delay: 700ms; }
+.cinema-content h1 em { display:inline-block; }
+.cinema-content .btn { transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease; }
+.cinema-content .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.2); }
+@media (prefers-reduced-motion: reduce) {
+  .cinema-content > .eyebrow,
+  .cinema-content > h1,
+  .cinema-content > .cinema-sub,
+  .cinema-content > .actions,
+  .cinema-content > .hero-foot {
+    opacity: 1;
+    animation: none;
+  }
+  .cinema-content .btn { transition: none; }
+}
