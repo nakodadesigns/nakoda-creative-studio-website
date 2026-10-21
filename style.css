@@ -445,8 +445,49 @@
 }
 
 
-/* Approved final hero artwork: show the complete image without overlays or duplicate HTML text */
-.cinema-hero.cinema-image-only{display:block;min-height:0;height:auto;padding:0;background:transparent;overflow:hidden;}
-.cinema-hero.cinema-image-only .cinema-final-art{display:block;width:100%;height:auto;max-width:none;object-fit:contain;object-position:center;clip-path:none;transform:none;opacity:1;}
-.cinema-hero.cinema-image-only::before,.cinema-hero.cinema-image-only::after{display:none!important;content:none!important;}
-@media(max-width:680px){.cinema-hero.cinema-image-only{min-height:0;height:auto;align-items:initial;}.cinema-hero.cinema-image-only .cinema-final-art{width:100%;height:auto;object-fit:contain;}}
+/* Approved hero fix: fit the complete artwork within the first viewport without cropping or dark overlays */
+.cinema-hero.cinema-image-only{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:calc(100vh - 76px);
+  height:calc(100svh - 76px);
+  min-height:0;
+  padding:0;
+  overflow:hidden;
+  background:#f7f3e9;
+}
+.cinema-hero.cinema-image-only .cinema-final-art{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  max-height:none;
+  object-fit:contain;
+  object-position:center;
+  clip-path:none;
+  transform:none;
+  opacity:1;
+}
+.cinema-hero.cinema-image-only::before,
+.cinema-hero.cinema-image-only::after{
+  display:none!important;
+  content:none!important;
+}
+@media(max-width:680px){
+  .cinema-hero.cinema-image-only{
+    height:calc(100vh - 70px);
+    height:calc(100svh - 70px);
+    min-height:0;
+    align-items:center;
+  }
+  .cinema-hero.cinema-image-only .cinema-final-art{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .cinema-hero.cinema-image-only .cinema-final-art{scroll-behavior:auto;}
+}
