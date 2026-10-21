@@ -922,3 +922,34 @@
   }
   .cinema-hero.cinema-split-hero .split-hero-visual img{object-position:78% center!important;transform:none!important;}
 }
+
+
+/* Hero correction from the latest live screenshot: remove the duplicate baked-in headline from the artwork edge */
+.cinema-hero.cinema-split-hero .split-hero-visual{
+  overflow:hidden!important;
+  background:#f8f5ed!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-visual::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  z-index:3!important;
+  inset:0 auto 0 0!important;
+  width:58%!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,#f8f5ed 0%,#f8f5ed 22%,rgba(248,245,237,.96) 35%,rgba(248,245,237,.82) 49%,rgba(248,245,237,.42) 72%,rgba(248,245,237,0) 100%)!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-visual img{
+  object-position:84% center!important;
+  transform:none!important;
+}
+@media(max-width:1000px) and (min-width:681px){
+  .cinema-hero.cinema-split-hero .split-hero-visual::before{width:52%!important;}
+}
+@media(max-width:680px){
+  .cinema-hero.cinema-split-hero .split-hero-visual::before{
+    inset:0 0 auto!important;width:100%!important;height:0!important;
+    background:none!important;
+  }
+  .cinema-hero.cinema-split-hero .split-hero-visual img{object-position:84% center!important;}
+}
