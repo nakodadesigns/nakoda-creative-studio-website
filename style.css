@@ -654,3 +654,171 @@
 @media(prefers-reduced-motion:reduce){
   .split-hero-services a>span{transition:none;}
 }
+
+
+/* NCS hero correction: compact proportions, clean spacing, no dark text panel */
+.cinema-hero.cinema-split-hero{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.02fr)!important;
+  width:100%!important;
+  height:min(690px,calc(100svh - 78px))!important;
+  min-height:540px!important;
+  max-height:690px!important;
+  padding:0!important;
+  margin:0!important;
+  overflow:hidden!important;
+  background:#f7f3e9!important;
+  color:#102943!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-copy{
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  align-items:flex-start!important;
+  min-width:0!important;
+  padding:clamp(30px,3.4vw,58px) clamp(24px,3.6vw,58px)!important;
+  background:#f7f3e9!important;
+  color:#102943!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-eyebrow{
+  margin:0 0 14px!important;
+  color:#263b50!important;
+  font-size:10px!important;
+  font-weight:800!important;
+  line-height:1.5!important;
+  letter-spacing:.12em!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-copy h1{
+  margin:0 0 16px!important;
+  max-width:600px!important;
+  color:#102943!important;
+  font-size:clamp(42px,4.2vw,66px)!important;
+  font-weight:760!important;
+  line-height:1.01!important;
+  letter-spacing:-.045em!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-copy h1 em{color:#c58b17!important;font-style:normal!important;}
+.cinema-hero.cinema-split-hero .split-hero-description{
+  max-width:490px!important;
+  margin:0!important;
+  color:#34475a!important;
+  font-size:clamp(14px,1.05vw,17px)!important;
+  line-height:1.6!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-actions{
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  gap:10px!important;
+  margin:20px 0 20px!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-actions .btn{
+  display:inline-flex!important;
+  width:auto!important;
+  min-height:43px!important;
+  margin:0!important;
+  padding:12px 16px!important;
+  border-radius:6px!important;
+  font-size:12px!important;
+  line-height:1.2!important;
+  white-space:nowrap!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-services{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  align-items:start!important;
+  width:100%!important;
+  gap:12px 8px!important;
+  margin:0!important;
+  padding:0!important;
+  list-style:none!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-services a{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  color:#19334b!important;
+  font-size:10px!important;
+  line-height:1.25!important;
+  text-align:center!important;
+  text-decoration:none!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-services a>span{
+  display:grid!important;
+  place-items:center!important;
+  flex:none!important;
+  width:34px!important;
+  height:34px!important;
+  margin:0 0 5px!important;
+  border:1px solid #e1e4e4!important;
+  border-radius:10px!important;
+  background:#fff!important;
+  box-shadow:0 3px 10px rgba(16,41,67,.06)!important;
+  color:#102943!important;
+  font-size:18px!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-services b{display:block!important;font-weight:600!important;}
+.cinema-hero.cinema-split-hero .split-hero-visual{
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  background:#e9e1d1!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-visual img{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+  margin:0!important;
+  object-fit:cover!important;
+  object-position:78% center!important;
+  clip-path:none!important;
+  transform:none!important;
+  opacity:1!important;
+}
+/* Desktop: keep a balanced first screen; mobile: stack copy then artwork. */
+@media(min-width:1500px){
+  .cinema-hero.cinema-split-hero{height:min(720px,calc(100svh - 78px))!important;}
+  .cinema-hero.cinema-split-hero .split-hero-copy{padding-left:clamp(48px,5vw,86px)!important;}
+}
+@media(max-width:1000px) and (min-width:681px){
+  .cinema-hero.cinema-split-hero{grid-template-columns:minmax(0,1fr) minmax(0,.88fr)!important;height:auto!important;min-height:590px!important;max-height:none!important;}
+  .cinema-hero.cinema-split-hero .split-hero-copy{padding:28px 22px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-copy h1{font-size:clamp(38px,4.7vw,54px)!important;}
+  .cinema-hero.cinema-split-hero .split-hero-services{gap:11px 5px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-services a{font-size:9px!important;}
+}
+@media(max-width:680px){
+  .cinema-hero.cinema-split-hero{
+    display:flex!important;
+    flex-direction:column!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:hidden!important;
+  }
+  .cinema-hero.cinema-split-hero .split-hero-copy{padding:32px 22px 24px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-copy h1{font-size:clamp(42px,11vw,58px)!important;}
+  .cinema-hero.cinema-split-hero .split-hero-description{font-size:15px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-actions{margin:18px 0!important;}
+  .cinema-hero.cinema-split-hero .split-hero-actions .btn{min-height:42px!important;padding:11px 12px!important;font-size:11px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-services{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px 4px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-services a{font-size:9px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-services a>span{width:32px!important;height:32px!important;font-size:17px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-visual{height:clamp(230px,68vw,360px)!important;flex:none!important;}
+  .cinema-hero.cinema-split-hero .split-hero-visual img{object-position:78% center!important;}
+}
