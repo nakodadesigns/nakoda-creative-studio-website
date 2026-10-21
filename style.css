@@ -822,3 +822,22 @@
   .cinema-hero.cinema-split-hero .split-hero-visual{height:clamp(230px,68vw,360px)!important;flex:none!important;}
   .cinema-hero.cinema-split-hero .split-hero-visual img{object-position:78% center!important;}
 }
+
+
+/* Final image-framing fix: anchor the collage to the right so embedded headline lettering stays out of view */
+.cinema-hero.cinema-split-hero .split-hero-visual{
+  background:#f7f3e9!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-visual img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:right center!important;
+  transform:none!important;
+}
+@media(max-width:680px){
+  .cinema-hero.cinema-split-hero .split-hero-visual img{
+    object-fit:cover!important;
+    object-position:right center!important;
+  }
+}
