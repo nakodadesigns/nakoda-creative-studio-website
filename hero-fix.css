@@ -1,0 +1,88 @@
+/* Isolated, reversible homepage hero refinement.
+   This file only affects the homepage split hero. */
+.cinema-hero.cinema-split-hero{
+  display:grid!important;
+  grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)!important;
+  width:100%!important;
+  height:min(700px,calc(100svh - 78px))!important;
+  min-height:560px!important;
+  max-height:700px!important;
+  overflow:hidden!important;
+  background:#f7f3e9!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-copy{
+  min-width:0!important;
+  padding:clamp(28px,3.2vw,54px) clamp(24px,3.8vw,64px)!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-copy h1{
+  font-size:clamp(40px,4.05vw,66px)!important;
+  line-height:1.01!important;
+  letter-spacing:-.045em!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-visual{
+  position:relative!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  overflow:hidden!important;
+  background:#172b3b!important;
+}
+.cinema-hero.cinema-split-hero .split-hero-visual img{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:cover!important;
+  object-position:100% center!important;
+  clip-path:none!important;
+  transform:none!important;
+  opacity:1!important;
+}
+/* Softly blend the image's left edge into the ivory copy panel.
+   Right-aligned landscape framing keeps the duplicated baked-in copy out of view. */
+.cinema-hero.cinema-split-hero .split-hero-visual::before{
+  content:""!important;
+  position:absolute!important;
+  z-index:2!important;
+  inset:0 auto 0 0!important;
+  width:24%!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,#f7f3e9 0%,rgba(247,243,233,.84) 22%,rgba(247,243,233,.28) 68%,rgba(247,243,233,0) 100%)!important;
+}
+@media(min-width:1500px){
+  .cinema-hero.cinema-split-hero{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr)!important;}
+}
+@media(max-width:1000px) and (min-width:681px){
+  .cinema-hero.cinema-split-hero{
+    grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr)!important;
+    height:auto!important;min-height:590px!important;max-height:none!important;
+  }
+  .cinema-hero.cinema-split-hero .split-hero-copy{padding:28px 22px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-copy h1{font-size:clamp(37px,4.5vw,52px)!important;}
+  .cinema-hero.cinema-split-hero .split-hero-visual::before{width:18%!important;}
+}
+@media(max-width:680px){
+  .cinema-hero.cinema-split-hero{
+    display:flex!important;flex-direction:column!important;
+    height:auto!important;min-height:0!important;max-height:none!important;
+  }
+  .cinema-hero.cinema-split-hero .split-hero-copy{padding:32px 22px 24px!important;}
+  .cinema-hero.cinema-split-hero .split-hero-copy h1{font-size:clamp(42px,11vw,58px)!important;}
+  .cinema-hero.cinema-split-hero .split-hero-visual{
+    position:relative!important;flex:none!important;
+    width:100%!important;height:clamp(230px,64vw,340px)!important;
+  }
+  .cinema-hero.cinema-split-hero .split-hero-visual img{
+    object-position:100% center!important;
+  }
+  .cinema-hero.cinema-split-hero .split-hero-visual::before{
+    width:100%!important;height:18%!important;inset:0 0 auto!important;
+    background:linear-gradient(180deg,#f7f3e9 0%,rgba(247,243,233,.5) 42%,rgba(247,243,233,0) 100%)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .cinema-hero.cinema-split-hero *{animation:none!important;transition:none!important;}
+}
