@@ -953,3 +953,25 @@
   }
   .cinema-hero.cinema-split-hero .split-hero-visual img{object-position:84% center!important;}
 }
+
+
+/* Subtle section entrance motion — presentation only; respects reduced-motion preferences */
+@keyframes ncs-section-enter {
+  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+main > section,
+footer.footer {
+  animation: ncs-section-enter 650ms cubic-bezier(.22,.61,.36,1) both;
+}
+main > section:nth-of-type(2) { animation-delay: 60ms; }
+main > section:nth-of-type(3) { animation-delay: 100ms; }
+main > section:nth-of-type(4) { animation-delay: 140ms; }
+main > section:nth-of-type(n+5) { animation-delay: 180ms; }
+@media (prefers-reduced-motion: reduce) {
+  main > section,
+  footer.footer {
+    animation: none !important;
+    transform: none !important;
+  }
+}
