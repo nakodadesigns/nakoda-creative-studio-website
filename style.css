@@ -953,3 +953,29 @@
   }
   .cinema-hero.cinema-split-hero .split-hero-visual img{object-position:84% center!important;}
 }
+
+
+/* Subtle section entrance motion — animate as each section enters the viewport */
+@keyframes ncs-section-enter {
+  from { opacity: 0; transform: translate3d(0, 18px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+main > section,
+footer.footer {
+  animation: ncs-section-enter 700ms cubic-bezier(.22,.61,.36,1) both;
+}
+/* Modern browsers trigger the entrance when visitors scroll to each section. */
+@supports (animation-timeline: view()) {
+  main > section,
+  footer.footer {
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  main > section,
+  footer.footer {
+    animation: none !important;
+    transform: none !important;
+  }
+}
